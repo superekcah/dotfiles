@@ -12,7 +12,8 @@ set background=dark
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'nvie/vim-flake8'
+" vim-scripts
+Bundle 'vim-flake8'
 
 filetype plugin indent on
 " Python
