@@ -40,7 +40,7 @@ let g:pydiction_location='~/.vim/bundle/Pydiction'
 " vim flake8
 let g:pyflakdes_use_quickfix=0
 let g:flake8_ignore='E501'
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 
 " taglist-plus
 let Tlist_Show_One_File=1
@@ -48,8 +48,17 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close=1
 let Tlist_Use_Right_Window=1
 let Tlist_Show_Menu=1
-nmap <silent> <F7> :TlistToggle<cr>
+nmap <silent> <F9> :TlistToggle<cr>
 
 " NERDTree
 let g:NERDTree_title='[NERD Tree]'
 nmap <silent> <F8> :NERDTreeToggle<cr>
+
+" MiniBufExplorer
+let g:miniBufExplSplitBelow=0
+let g:miniBufExplMinSize=1
+let g:miniBufExplMaxSize=3
+let g:miniBufExplorerMoreThanOne=1
+let g:miniBufExplMapWindowNavVim=1
+let g:miniBufExplMapWindowNavArrows=1
+let g:minBufExplModSelTarget=1
