@@ -55,10 +55,11 @@ let g:NERDTree_title='[NERD Tree]'
 nmap <silent> <F8> :NERDTreeToggle<cr>
 
 " MiniBufExplorer
-let g:miniBufExplSplitBelow=0
-let g:miniBufExplMinSize=1
-let g:miniBufExplMaxSize=3
-let g:miniBufExplorerMoreThanOne=1
-let g:miniBufExplMapWindowNavVim=1
-let g:miniBufExplMapWindowNavArrows=1
-let g:minBufExplModSelTarget=1
+"let g:miniBufExplSplitBelow=0
+"let g:miniBufExplMinSize=1
+"let g:miniBufExplMaxSize=3
+"let g:miniBufExplorerMoreThanOne=1
+"let g:miniBufExplMapWindowNavVim=1
+"let g:miniBufExplMapWindowNavArrows=1
+"let g:minBufExplModSelTarget=1
+
