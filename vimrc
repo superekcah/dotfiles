@@ -15,6 +15,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
+set colorcolumn=80
 
 " My Bundles
 set rtp+=~/.vim/bundle/vundle/
