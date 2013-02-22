@@ -16,6 +16,8 @@ set expandtab
 set autoindent
 set smartindent
 set colorcolumn=80
+"set hlsearch
+set incsearch
 
 " My Bundles
 set rtp+=~/.vim/bundle/vundle/
@@ -37,8 +39,10 @@ filetype plugin indent on
 autocmd FileType python setlocal et sta sw=4 sts=4
 autocmd FileType python setlocal foldmethod=indent
 set foldlevel=99
+" Generate tags
+noremap <leader>ptags :! find -X . -name \*.py -print \| xargs ptags.py
 
-" auto completion
+" Auto-completion
 set completeopt=longest,menu
 set wildmenu
 autocmd FileType python set omnifunc=pythoncomplete#Complete
