@@ -1,12 +1,12 @@
 # key bind
-escape ^pp
+#escape ^pp
 
 # clear content left by program like vim
 altscreen on
 
 defutf8 on
 
-vbell off
+vbell on
 
 #change the hardstatus settings to give an window list at the bottom of the                 
 #screen, with the time and date and with the current window highlighted
