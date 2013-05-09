@@ -19,6 +19,10 @@ set colorcolumn=80
 "set hlsearch
 set incsearch
 
+if has("statusline")                                                            
+    set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+endif 
+
 " My Bundles
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
