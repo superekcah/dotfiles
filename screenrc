@@ -12,4 +12,4 @@ vbell on
 #screen, with the time and date and with the current window highlighted
 hardstatus alwayslastline                                                     
 #hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
-hardstatus string '%{= kG}[ %{G}%H %{g}][%{Y}%l%{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %D %M %d %Y %c:%s %{g}]'
+hardstatus string '%{= kG}[%{Y}%l%{g}][ %-w%{= BW}%n% %t%{-}%+w %-= ][%{B} %D %M %d %Y %c:%s %{g}]'
