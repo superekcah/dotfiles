@@ -6,6 +6,7 @@ set ruler
 set number
 set showcmd
 set modeline
+let g:solarized_termcolors=16
 set background=dark
 set encoding=utf-8
 set laststatus=2
@@ -16,7 +17,7 @@ set expandtab
 set autoindent
 set smartindent
 set colorcolumn=80
-"set hlsearch
+set hlsearch
 set incsearch
 
 if has("statusline")                                                            
@@ -38,6 +39,10 @@ Bundle 'Pydiction'
 Bundle 'taglist-plus'
 Bundle 'minibufexplorerpp'
 Bundle 'The-NERD-Commenter'
+Bundle 'Solarized'
+
+"set color scheme
+colorscheme solarized
 
 filetype plugin indent on
 " Python
