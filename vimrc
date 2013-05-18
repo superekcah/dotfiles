@@ -6,7 +6,6 @@ set ruler
 set number
 set showcmd
 set modeline
-let g:solarized_termcolors=16
 set background=dark
 set encoding=utf-8
 set laststatus=2
@@ -30,6 +29,7 @@ call vundle#rc()
 Bundle "gmarik/vundle"
 " Github
 Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
 " vim-scripts
 Bundle 'c.vim'
 Bundle 'vim-flake8'
@@ -39,9 +39,10 @@ Bundle 'Pydiction'
 Bundle 'taglist-plus'
 Bundle 'minibufexplorerpp'
 Bundle 'The-NERD-Commenter'
-Bundle 'Solarized'
+Bundle 'fugitive.vim'
 
 "set color scheme
+let g:solarized_termcolors=16
 colorscheme solarized
 
 filetype plugin indent on
