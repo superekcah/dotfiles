@@ -43,6 +43,7 @@ Bundle 'fugitive.vim'
 
 "set color scheme
 let g:solarized_termcolors=16
+let g:solarized_termtrans=1
 colorscheme solarized
 
 filetype plugin indent on
