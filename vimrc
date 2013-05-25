@@ -19,9 +19,9 @@ set colorcolumn=80
 set hlsearch
 set incsearch
 
-if has("statusline")                                                            
+if has("statusline")
     set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
-endif 
+endif
 
 " My Bundles
 set rtp+=~/.vim/bundle/vundle/
@@ -91,6 +91,30 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 
+" cscope
+if has("cscope")
+    "set csprg=/usr/bin/cscope
+    set csto=1
+    set cst
+    set nocsverb
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    " else add database pointed to by environment
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    set csverb
+    nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+endif
+
 " MiniBufExplorer
 "let g:miniBufExplSplitBelow=0
 "let g:miniBufExplMinSize=1
@@ -99,4 +123,3 @@ let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 "let g:miniBufExplMapWindowNavVim=1
 "let g:miniBufExplMapWindowNavArrows=1
 "let g:minBufExplModSelTarget=1
-
