@@ -62,8 +62,8 @@ let g:pydiction_location='~/.vim/bundle/Pydiction'
 
 " vim flake8
 let g:pyflakdes_use_quickfix=0
-let g:flake8_ignore='E501'
-"autocmd BufWritePost *.py call Flake8()
+"let g:flake8_ignore='E501'
+autocmd BufWritePost *.py call Flake8()
 
 " taglist-plus
 let Tlist_Show_One_File=1
