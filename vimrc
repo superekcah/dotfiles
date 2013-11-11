@@ -123,3 +123,14 @@ endif
 "let g:miniBufExplMapWindowNavVim=1
 "let g:miniBufExplMapWindowNavArrows=1
 "let g:minBufExplModSelTarget=1
+"
+
+" diff saved
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
