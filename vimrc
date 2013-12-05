@@ -94,7 +94,7 @@ let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 
 " cscope
 if has("cscope")
-    "set csprg=/usr/bin/cscope
+    set csprg=/usr/local/bin/cscope
     set csto=1
     set cst
     set nocsverb
