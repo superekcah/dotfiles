@@ -36,7 +36,7 @@ Bundle 'vim-flake8'
 Bundle 'ctrlp.vim'
 Bundle 'pythoncomplete'
 Bundle 'Pydiction'
-Bundle 'taglist-plus'
+" Bundle 'taglist-plus'
 Bundle 'minibufexplorerpp'
 Bundle 'The-NERD-Commenter'
 Bundle 'fugitive.vim'
@@ -66,12 +66,12 @@ let g:pyflakdes_use_quickfix=0
 autocmd BufWritePost *.py call Flake8()
 
 " taglist-plus
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
-let Tlist_File_Fold_Auto_Close=1
-let Tlist_Use_Right_Window=1
-let Tlist_Show_Menu=1
-nmap <silent> <F9> :TlistToggle<cr>
+" let Tlist_Show_One_File=1
+" let Tlist_Exit_OnlyWindow=1
+" let Tlist_File_Fold_Auto_Close=1
+" let Tlist_Use_Right_Window=1
+" let Tlist_Show_Menu=1
+" nmap <silent> <F9> :TlistToggle<cr>
 
 " NERDTree
 let g:NERDTree_title='[NERD Tree]'
