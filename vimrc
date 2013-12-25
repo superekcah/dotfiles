@@ -30,6 +30,7 @@ Bundle "gmarik/vundle"
 " Github
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'mbadran/headlights'
 " vim-scripts
 Bundle 'c.vim'
 Bundle 'vim-flake8'
@@ -123,7 +124,6 @@ endif
 "let g:miniBufExplMapWindowNavVim=1
 "let g:miniBufExplMapWindowNavArrows=1
 "let g:minBufExplModSelTarget=1
-"
 
 " diff saved
 function! s:DiffWithSaved()
@@ -134,3 +134,6 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
+
+" Other custom key-bindings
+cmap w!! w !sudo tee >/dev/null %
