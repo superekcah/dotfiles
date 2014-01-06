@@ -136,4 +136,4 @@ endfunction
 com! DiffSaved call s:DiffWithSaved()
 
 " Other custom key-bindings
-cmap w!! w !sudo tee >/dev/null %
+cmap w!! w !sudo tee % >/dev/null
