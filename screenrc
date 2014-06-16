@@ -11,6 +11,8 @@ vbell on
 # bigger scrollback
 defscrollback 32768
 
+# set login shell
+defshell -bash
 #shell zsh
 
 #change the hardstatus settings to give an window list at the bottom of the                 
