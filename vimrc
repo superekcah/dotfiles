@@ -30,7 +30,8 @@ Bundle "gmarik/vundle"
 " Github
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'mbadran/headlights'
+"Bundle 'mbadran/headlights'
+Bundle 'bling/vim-airline'
 " vim-scripts
 Bundle 'c.vim'
 Bundle 'vim-flake8'
