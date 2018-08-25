@@ -48,6 +48,9 @@ let g:solarized_termcolors=16
 let g:solarized_termtrans=1
 colorscheme solarized
 
+" vim-airline
+let g:airline_theme='solarized'
+
 filetype plugin indent on
 " Python
 autocmd FileType python setlocal et sta sw=4 sts=4

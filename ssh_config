@@ -1,0 +1,49 @@
+# jump server
+host yiqiao_pub
+    hostname 106.2.45.9
+    forwardagent yes
+    port 1046
+    user xuchengli
+    identityfile ~/.ssh/superekcah
+
+host cba88
+    hostname 114.113.199.88
+    forwardagent yes
+    port 1046
+    user xuchengli
+    identityfile ~/.ssh/superekcah
+
+# yiqiao pub
+host cyqctrl8
+    hostname cyqctrl8.yq.pub.ntes
+    forwardagent yes
+    port 1046
+    user xuchengli
+    identityfile ~/.ssh/superekcah
+    proxycommand ssh yiqiao_pub nc %h %p
+
+# classa
+host ca10
+    hostname 223.252.217.10
+    forwardagent yes
+    port 1046
+    user xuchengli
+    identityfile ~/.ssh/superekcah
+
+# yiqiaoa
+host pri1-net13
+    hostname pri1-net13.yq.163.org
+    forwardagent yes
+    port 1046
+    user xuchengli
+    identityfile ~/.ssh/superekcah
+    proxycommand ssh cba88 nc %h %p
+
+# Testing
+host xcl-dev-1
+    hostname 10.0.1.2
+    forwardagent yes
+    user ubuntu
+    port 22
+    identityfile ~/.ssh/superekcah
+    proxycommand ssh -p 1046 -l xuchengli 115.236.124.86 nc %h %p
