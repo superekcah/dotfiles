@@ -30,8 +30,10 @@ Bundle "gmarik/vundle"
 " Github
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'mbadran/headlights'
-Bundle 'bling/vim-airline'
+"Bundle 'mbadran/headlights'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+
 " vim-scripts
 Bundle 'c.vim'
 Bundle 'vim-flake8'
@@ -50,6 +52,7 @@ colorscheme solarized
 
 " vim-airline
 let g:airline_theme='solarized'
+let g:airline_solarized_bg="dark"
 
 filetype plugin indent on
 " Python
