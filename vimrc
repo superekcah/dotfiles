@@ -2,6 +2,7 @@
 set nocompatible
 syntax on
 filetype off
+set backspace=indent,eol,start
 set ruler
 set number
 set showcmd
