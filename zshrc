@@ -46,16 +46,16 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-WORKON_HOME="/Users/superekcah/.virtualenvs"
+export PYENV_VIRTUALENVWRAPPER_PREFIX_PYENV=true
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew pip tmux colored-man virtualenv virtualenvwrapper)
+plugins=(git brew pyenv pip tmux colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 
 # Customize to your needs...
 export LSCOLORS=exfxcxdxbxegedabagacad
@@ -65,4 +65,4 @@ export PIP_REQUIRE_VIRTUALENV=true
 # # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # PATH
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/opt/mysql-client/bin:$PATH"
