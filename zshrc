@@ -1,6 +1,15 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# PATH
+export PATH="$HOME/.jenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# Java
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+
+# pkg-config
+# export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl/lib/pkgconfig"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -15,6 +24,13 @@ POWERLINE_DETECT_SSH="true"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs virtualenv time)
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# homebrew auto-completion
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+    autoload -Uz compinit
+    compinit
+fi
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -51,10 +67,10 @@ export PYENV_VIRTUALENVWRAPPER_PREFIX_PYENV=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew pyenv pip tmux colored-man-pages)
+plugins=(git pip tmux colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source /usr/local/bin/virtualenvwrapper.sh
 
 # Customize to your needs...
@@ -64,5 +80,16 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 export PIP_REQUIRE_VIRTUALENV=true
 # # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-# PATH
-export PATH="/usr/local/sbin:/usr/local/opt/mysql-client/bin:$PATH"
+
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# jevn
+eval "$(jenv init -)"
+
+# autojump
+[[ -s `brew --prefix`/etc/profile.d/autojump.sh ]] && . `brew --prefix`/etc/profile.d/autojump.sh
+
+# cleanup PATH
+typeset -U PATH
