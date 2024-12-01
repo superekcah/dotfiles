@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -16,14 +23,14 @@ export PATH="$HOME/.jenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="blinks"
 
-DEFAULT_USER="superekcah"
-POWERLINE_RIGHT_A="exit-status"
-POWERLINE_RIGHT_B="none"
-POWERLINE_HIDE_USER_NAME="true"
-POWERLINE_DETECT_SSH="true"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs virtualenv time)
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#DEFAULT_USER="superekcah"
+#POWERLINE_RIGHT_A="exit-status"
+#POWERLINE_RIGHT_B="none"
+#POWERLINE_HIDE_USER_NAME="true"
+#POWERLINE_DETECT_SSH="true"
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs virtualenv time)
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # homebrew auto-completion
 if type brew &>/dev/null; then
@@ -93,3 +100,6 @@ eval "$(jenv init -)"
 
 # cleanup PATH
 typeset -U PATH
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
