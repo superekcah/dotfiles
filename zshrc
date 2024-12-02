@@ -23,13 +23,13 @@ export PATH="$HOME/.jenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="blinks"
 
-#DEFAULT_USER="superekcah"
-#POWERLINE_RIGHT_A="exit-status"
-#POWERLINE_RIGHT_B="none"
-#POWERLINE_HIDE_USER_NAME="true"
-#POWERLINE_DETECT_SSH="true"
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs virtualenv time)
+DEFAULT_USER="superekcah"
+POWERLINE_RIGHT_A="exit-status"
+POWERLINE_RIGHT_B="none"
+POWERLINE_HIDE_USER_NAME="true"
+POWERLINE_DETECT_SSH="true"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs virtualenv time)
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # homebrew auto-completion
